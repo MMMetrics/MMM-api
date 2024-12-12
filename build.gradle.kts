@@ -21,6 +21,7 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+    implementation("org.springframework.boot:spring-boot-starter-graphql")
 
     implementation("com.graphql-java-kickstart:graphql-spring-boot-starter:13.0.1")
     implementation("com.graphql-java-kickstart:graphql-java-tools:13.0.1")
