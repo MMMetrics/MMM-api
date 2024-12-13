@@ -2,5 +2,8 @@ spring:
   application:
     name: mmm
 
+  graphql:
+    path: /graphql
+
 server:
   port: 8080
