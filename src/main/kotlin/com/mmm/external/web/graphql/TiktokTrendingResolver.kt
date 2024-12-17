@@ -6,7 +6,7 @@ import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.QueryMapping
 
 @GraphQLResolver
-class TiktokTrendingResolver(
+private class TiktokTrendingResolver(
     private val tiktokApiClient: TiktokApiClient
 ) {
 
