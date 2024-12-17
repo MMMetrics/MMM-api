@@ -1,1 +1,14 @@
+type Query {
+    tiktokTrending(n: Int): [TiktokTrendingResponse]
+}
+
+type TiktokTrendingResponse {
+    title: String
+    hashtags: [String]
+    likesCount: Int
+    commentsCount: Int
+    viewsCount: Int
+    category: String
+}
+
 scalar DateTime
