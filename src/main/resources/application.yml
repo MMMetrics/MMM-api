@@ -7,7 +7,3 @@ spring:
 
 server:
   port: 8080
-
-tiktok:
-  base-url: ${TIKTOK_BASE_URL}
-  trending-api: ${TIKTOK_TRENDING_API}
