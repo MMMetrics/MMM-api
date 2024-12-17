@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.graphql.execution.RuntimeWiringConfigurer
 
 @Configuration
-internal class GraphQLConfiguration {
+private class GraphQLConfiguration {
 
     @Bean
     fun runtimeWiringConfigurer(): RuntimeWiringConfigurer = RuntimeWiringConfigurer {
