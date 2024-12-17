@@ -12,4 +12,5 @@ sealed class BusinessException(
         extensions[key] = value
         return this
     }
+
 }

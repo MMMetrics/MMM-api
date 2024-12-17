@@ -16,6 +16,7 @@ class TiktokApiClient(
     @Qualifier("tiktok") private val tiktokClient: WebClient,
     private val tiktokApiProperties: TiktokApiProperties
 ) {
+
     private val webClientBuilder: WebClientBuilder = WebClientBuilder()
 
     fun trending(

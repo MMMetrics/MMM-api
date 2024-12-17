@@ -4,6 +4,7 @@ import com.mmm.internal.data.client.response.TiktokTrendingResponse
 import kotlinx.serialization.json.*
 
 fun String.mapToTrendingResponse(): List<TiktokTrendingResponse> {
+
     val json = Json { ignoreUnknownKeys = true }
     val rootObject = json.parseToJsonElement(this).jsonObject
 
@@ -31,4 +32,5 @@ fun String.mapToTrendingResponse(): List<TiktokTrendingResponse> {
             category = item["CategoryType"]?.jsonPrimitive?.contentOrNull ?: ""
         )
     } ?: emptyList()
+
 }

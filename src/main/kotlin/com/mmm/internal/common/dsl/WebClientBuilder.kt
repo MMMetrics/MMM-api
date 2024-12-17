@@ -6,6 +6,7 @@ import org.springframework.web.reactive.function.client.WebClient
 import reactor.core.publisher.Mono
 
 class WebClientBuilder {
+
     private var webClient: WebClient? = null
     private var uri: String = "/"
     private val queryParams: MultiValueMap<String, String?> = LinkedMultiValueMap()
