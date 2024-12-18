@@ -1,6 +1,6 @@
 ---
 name: Issue template-936
-about: Issue template 입니다.
+about: Issue template
 title: ''
 labels: ''
 assignees: ''
