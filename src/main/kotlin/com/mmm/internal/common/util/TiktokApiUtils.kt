@@ -1,6 +1,6 @@
 package com.mmm.internal.common.util
 
-import com.mmm.internal.data.client.response.TiktokTrendingResponse
+import com.mmm.internal.data.client.response.*
 import kotlinx.serialization.json.*
 
 fun String.mapToTrendingResponse(): List<TiktokTrendingResponse> {
@@ -26,9 +26,9 @@ fun String.mapToTrendingResponse(): List<TiktokTrendingResponse> {
         TiktokTrendingResponse(
             title = item["desc"]?.jsonPrimitive?.contentOrNull ?: "",
             hashtags = hashtags,
-            likesCount = statsV2?.get("diggCount")?.jsonPrimitive?.contentOrNull?.toIntOrNull() ?: 0,
-            commentsCount = statsV2?.get("commentCount")?.jsonPrimitive?.contentOrNull?.toIntOrNull() ?: 0,
-            viewsCount = statsV2?.get("playCount")?.jsonPrimitive?.contentOrNull?.toIntOrNull() ?: 0,
+            heartCount = statsV2?.get("diggCount")?.jsonPrimitive?.longOrNull ?: 0,
+            commentsCount = statsV2?.get("commentCount")?.jsonPrimitive?.longOrNull ?: 0,
+            viewsCount = statsV2?.get("playCount")?.jsonPrimitive?.longOrNull ?: 0,
             category = item["CategoryType"]?.jsonPrimitive?.contentOrNull ?: ""
         )
     } ?: emptyList()

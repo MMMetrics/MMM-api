@@ -5,7 +5,7 @@ type Query {
 type TiktokTrendingResponse {
     title: String
     hashtags: [String]
-    likesCount: Int
+    heartCount: Int
     commentsCount: Int
     viewsCount: Int
     category: String

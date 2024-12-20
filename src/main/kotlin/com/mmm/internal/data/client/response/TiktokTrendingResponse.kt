@@ -346,8 +346,8 @@ package com.mmm.internal.data.client.response
 data class TiktokTrendingResponse(
     val title: String,
     val hashtags: List<String>,
-    val likesCount: Int,
-    val commentsCount: Int,
-    val viewsCount: Int,
+    val heartCount: Long,
+    val commentsCount: Long,
+    val viewsCount: Long,
     val category: String
 )
