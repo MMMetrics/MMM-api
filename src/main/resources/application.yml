@@ -5,9 +5,18 @@ spring:
   graphql:
     path: /graphql
 
+    # dev-mode
+    graphiql:
+      enabled: true
+
 server:
   port: 8080
 
 tiktok:
   base-url: ${TIKTOK_BASE_URL}
-  trending-api: ${TIKTOK_TRENDING_API}
+  id:
+    device: ${TIKTOK_DEVICE_ID}
+    a: ${TIKTOK_AID}
+  api:
+    trending: ${TIKTOK_TRENDING_API}
+    explore: ${TIKTOK_EXPLORE_API}

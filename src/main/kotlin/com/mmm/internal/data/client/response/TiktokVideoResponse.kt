@@ -343,7 +343,7 @@ package com.mmm.internal.data.client.response
  *     "status_msg": ""
  * }</pre>
  */
-data class TiktokTrendingResponse(
+data class TiktokVideoResponse(
     val title: String,
     val hashtags: List<String>,
     val heartCount: Long,

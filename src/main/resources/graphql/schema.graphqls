@@ -1,8 +1,9 @@
 type Query {
-    tiktokTrending(n: Int): [TiktokTrendingResponse]
+    tiktokTrending(n: Int): [TiktokVideoResponse]
+    tiktokExplore(category: Int, n: Int): [TiktokVideoResponse]
 }
 
-type TiktokTrendingResponse {
+type TiktokVideoResponse {
     title: String
     hashtags: [String]
     heartCount: Int

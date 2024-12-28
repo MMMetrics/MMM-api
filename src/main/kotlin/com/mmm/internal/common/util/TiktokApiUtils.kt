@@ -1,9 +1,14 @@
 package com.mmm.internal.common.util
 
-import com.mmm.internal.data.client.response.*
-import kotlinx.serialization.json.*
+import com.mmm.internal.data.client.response.TiktokVideoResponse
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.contentOrNull
+import kotlinx.serialization.json.jsonArray
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.longOrNull
 
-fun String.mapToTrendingResponse(): List<TiktokTrendingResponse> {
+fun String.mapToTiktokResponse(): List<TiktokVideoResponse> {
 
     val json = Json { ignoreUnknownKeys = true }
     val rootObject = json.parseToJsonElement(this).jsonObject
@@ -23,7 +28,7 @@ fun String.mapToTrendingResponse(): List<TiktokTrendingResponse> {
 
         val statsV2 = item["statsV2"]?.jsonObject
 
-        TiktokTrendingResponse(
+        TiktokVideoResponse(
             title = item["desc"]?.jsonPrimitive?.contentOrNull ?: "",
             hashtags = hashtags,
             heartCount = statsV2?.get("diggCount")?.jsonPrimitive?.longOrNull ?: 0,

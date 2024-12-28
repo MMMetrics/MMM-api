@@ -6,11 +6,14 @@ import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.QueryMapping
 
 @GraphQLResolver
-private class TiktokTrendingResolver(
+private class TiktokGraphQLResolver(
     private val tiktokApiClient: TiktokApiClient
 ) {
 
     @QueryMapping("tiktokTrending")
     fun fetchTiktokTrendData(@Argument n: Int) = tiktokApiClient.trending(n)
+
+    @QueryMapping("tiktokExplore")
+    fun fetchTiktokExploreData(@Argument category: Int, @Argument n: Int) = tiktokApiClient.explore(category, n)
 
 }
