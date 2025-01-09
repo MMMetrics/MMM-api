@@ -6,7 +6,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 data class TiktokProperties(
     val baseUrl: String,
     val id: TiktokIdProperties,
-    val api: TiktokApiProperties
+    val api: TiktokApiProperties,
+    val security: TiktokSecurityProperties
 )
 
 data class TiktokIdProperties(
@@ -17,4 +18,10 @@ data class TiktokIdProperties(
 data class TiktokApiProperties(
     val trending: String,
     val explore: String
+)
+
+data class TiktokSecurityProperties(
+    val msToken: String,
+    val signature: String,
+    val xBogus: String
 )
