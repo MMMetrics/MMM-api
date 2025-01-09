@@ -20,3 +20,7 @@ tiktok:
   api:
     trending: ${TIKTOK_TRENDING_API}
     explore: ${TIKTOK_EXPLORE_API}
+  security:
+    ms-token: ${TIKTOK_MS_TOKEN}
+    signature: ${TIKTOK_SIGNATURE}
+    x-bogus: ${TIKTOK_X_BOGUS}

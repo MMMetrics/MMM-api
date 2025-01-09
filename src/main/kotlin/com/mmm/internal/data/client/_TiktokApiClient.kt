@@ -56,6 +56,9 @@ private class _TiktokApiClient(
             .queryParam("aid", tiktokProperties.id.a)
             .queryParam("categoryType", category)
             .queryParam("device_id", tiktokProperties.id.device)
+            .queryParam("msToken", tiktokProperties.security.msToken)
+            .queryParam("_signature", tiktokProperties.security.signature)
+            .queryParam("X-Bogus", tiktokProperties.security.xBogus)
             .build { it.mapToTiktokResponse() }
             .subscribeOn(Schedulers.boundedElastic())
             .timeout(Duration.ofSeconds(10))
