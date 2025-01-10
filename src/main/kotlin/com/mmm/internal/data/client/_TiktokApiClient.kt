@@ -66,6 +66,29 @@ private class _TiktokApiClient(
             .onErrorResume { Mono.empty() }
     }
 
+    override fun search(
+        keyword: String,
+        count: Int
+    ): Mono<List<TiktokVideoResponse>> {
+        return webClientBuilder.webClient(tiktokClient)
+            .uri(tiktokProperties.api.search)
+            .queryParam("count", count)
+            .queryParam("keyword", keyword)
+            .queryParam("region", REGION)
+            .queryParam("language", LANGUAGE)
+            .queryParam("tz_name", TIMEZONE)
+            .queryParam("aid", tiktokProperties.id.a)
+            .queryParam("device_id", tiktokProperties.id.device)
+            .queryParam("msToken", tiktokProperties.security.msToken)
+            .queryParam("_signature", tiktokProperties.security.signature)
+            .queryParam("X-Bogus", tiktokProperties.security.xBogus)
+            .build { it.mapToTiktokResponse() }
+            .subscribeOn(Schedulers.boundedElastic())
+            .timeout(Duration.ofSeconds(10))
+            .cache(Duration.ofHours(1))
+            .onErrorResume { Mono.empty() }
+    }
+
     companion object {
         private const val REGION = "KR"
         private const val LANGUAGE = "ko"

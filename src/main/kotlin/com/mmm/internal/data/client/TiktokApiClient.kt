@@ -6,4 +6,5 @@ import reactor.core.publisher.Mono
 interface TiktokApiClient {
     fun trending(count: Int): Mono<List<TiktokVideoResponse>>
     fun explore(category: Int, count: Int): Mono<List<TiktokVideoResponse>>
+    fun search(keyword: String, count: Int): Mono<List<TiktokVideoResponse>>
 }

@@ -17,7 +17,8 @@ data class TiktokIdProperties(
 
 data class TiktokApiProperties(
     val trending: String,
-    val explore: String
+    val explore: String,
+    val search: String
 )
 
 data class TiktokSecurityProperties(
