@@ -16,4 +16,6 @@ private class TiktokGraphQLResolver(
     @QueryMapping("tiktokExplore")
     fun fetchTiktokExploreData(@Argument category: Int, @Argument n: Int) = tiktokApiClient.explore(category, n)
 
+    @QueryMapping("tiktokSearch")
+    fun fetchTiktokSearchedData(@Argument keyword: String, @Argument n: Int) = tiktokApiClient.search(keyword, n)
 }
