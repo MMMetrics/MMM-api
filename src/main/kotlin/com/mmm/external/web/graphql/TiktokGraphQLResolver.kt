@@ -11,11 +11,12 @@ private class TiktokGraphQLResolver(
 ) {
 
     @QueryMapping("tiktokTrending")
-    fun fetchTiktokTrendData(@Argument n: Int) = tiktokApiClient.trending(n)
+    fun fetchTiktokTrendData(@Argument count: Int) = tiktokApiClient.trending(count)
 
     @QueryMapping("tiktokExplore")
-    fun fetchTiktokExploreData(@Argument category: Int, @Argument n: Int) = tiktokApiClient.explore(category, n)
+    fun fetchTiktokExploreData(@Argument category: Int, @Argument count: Int) = tiktokApiClient.explore(category, count)
 
     @QueryMapping("tiktokSearch")
-    fun fetchTiktokSearchedData(@Argument keyword: String, @Argument n: Int) = tiktokApiClient.search(keyword, n)
+    fun fetchTiktokSearchedData(@Argument keyword: String, @Argument count: Int) = tiktokApiClient.search(keyword, count)
+    
 }

@@ -1,7 +1,7 @@
 type Query {
     tiktokTrending(n: Int): [TiktokVideoResponse]
-    tiktokExplore(category: Int, n: Int): [TiktokVideoResponse]
-    tiktokSearch(keyword: String, n: Int): [TiktokVideoResponse]
+    tiktokExplore(category: Int, count: Int): [TiktokVideoResponse]
+    tiktokSearch(keyword: String, count: Int): [TiktokVideoResponse]
 }
 
 type TiktokVideoResponse {
