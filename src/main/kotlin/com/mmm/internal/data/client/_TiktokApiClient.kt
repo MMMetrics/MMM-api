@@ -1,6 +1,7 @@
 package com.mmm.internal.data.client
 
 import com.mmm.internal.common.dsl.WebClientBuilder
+import com.mmm.internal.common.exception.TiktokAPIBadRequestException
 import com.mmm.internal.common.util.mapToTiktokResponse
 import com.mmm.internal.data.client.response.TiktokVideoResponse
 import com.mmm.internal.data.property.TiktokProperties
@@ -23,7 +24,7 @@ private class _TiktokApiClient(
         count: Int
     ): Mono<List<TiktokVideoResponse>> {
         if (count > 3) {
-            return Mono.empty()
+            return Mono.error(TiktokAPIBadRequestException)
         }
 
         return webClientBuilder.webClient(tiktokClient)
@@ -44,7 +45,7 @@ private class _TiktokApiClient(
         count: Int
     ): Mono<List<TiktokVideoResponse>> {
         if (count > 3) {
-            return Mono.empty()
+            return Mono.error(TiktokAPIBadRequestException)
         }
 
         return webClientBuilder.webClient(tiktokClient)
