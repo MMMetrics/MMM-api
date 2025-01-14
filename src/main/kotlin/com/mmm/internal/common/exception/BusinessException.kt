@@ -14,3 +14,12 @@ sealed class BusinessException(
     }
 
 }
+
+data object TiktokAPIBadRequestException : BusinessException(
+    "BAD REQUEST: failed to fetch TIKTOK video data",
+    ErrorType.BAD_REQUEST
+) {
+
+    private fun readResolve(): Any = TiktokAPIBadRequestException
+
+}

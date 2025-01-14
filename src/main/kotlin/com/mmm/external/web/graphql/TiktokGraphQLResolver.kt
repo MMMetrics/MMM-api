@@ -6,7 +6,7 @@ import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.QueryMapping
 
 @GraphQLResolver
-private class TiktokGraphQLResolver(
+class TiktokGraphQLResolver(
     private val tiktokApiClient: TiktokApiClient
 ) {
 
@@ -18,5 +18,5 @@ private class TiktokGraphQLResolver(
 
     @QueryMapping("tiktokSearch")
     fun fetchTiktokSearchedData(@Argument keyword: String, @Argument count: Int) = tiktokApiClient.search(keyword, count)
-    
+
 }
