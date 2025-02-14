@@ -11,6 +11,7 @@ type TiktokVideoResponse {
     commentsCount: Int
     viewsCount: Int
     category: String
+    urlList: [String]
 }
 
 scalar DateTime

@@ -25,6 +25,10 @@ fun String.mapToTiktokResponse(): List<TiktokVideoResponse> {
             ?.distinct()
             ?: emptyList()
 
+        // video.bitrateInfo[0].PlayAddr.UrlList[]
+        val urlList = item["video"]?.jsonObject?.get("bitrateInfo")?.jsonArray?.get(0)
+            ?.jsonObject?.get("PlayAddr")?.jsonObject?.get("UrlList")?.jsonArray
+            ?.map { it.toString() }
 
         val statsV2 = item["statsV2"]?.jsonObject
 
@@ -34,7 +38,8 @@ fun String.mapToTiktokResponse(): List<TiktokVideoResponse> {
             heartCount = statsV2?.get("diggCount")?.jsonPrimitive?.longOrNull ?: 0,
             commentsCount = statsV2?.get("commentCount")?.jsonPrimitive?.longOrNull ?: 0,
             viewsCount = statsV2?.get("playCount")?.jsonPrimitive?.longOrNull ?: 0,
-            category = item["CategoryType"]?.jsonPrimitive?.contentOrNull ?: ""
+            category = item["CategoryType"]?.jsonPrimitive?.contentOrNull ?: "",
+            urlList = urlList ?: listOf()
         )
     } ?: emptyList()
 
