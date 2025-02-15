@@ -349,5 +349,6 @@ data class TiktokVideoResponse(
     val heartCount: Long,
     val commentsCount: Long,
     val viewsCount: Long,
-    val category: String
+    val category: String,
+    val urlList: List<String>
 )

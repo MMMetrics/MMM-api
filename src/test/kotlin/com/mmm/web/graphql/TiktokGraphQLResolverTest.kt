@@ -48,7 +48,8 @@ class TiktokGraphQLResolverTest {
                     heartCount = 500,
                     commentsCount = 50,
                     viewsCount = 5000,
-                    category = "123"
+                    category = "123",
+                    urlList = listOf()
                 )
             )
             
@@ -103,7 +104,8 @@ class TiktokGraphQLResolverTest {
                     heartCount = 500,
                     commentsCount = 50,
                     viewsCount = 5000,
-                    category = "123"
+                    category = "123",
+                    urlList = listOf()
                 )
             )
             
@@ -159,7 +161,8 @@ class TiktokGraphQLResolverTest {
                     heartCount = 500,
                     commentsCount = 50,
                     viewsCount = 5000,
-                    category = "123"
+                    category = "123",
+                    urlList = listOf()
                 )
             )
             
