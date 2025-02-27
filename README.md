@@ -6,7 +6,7 @@
 2. **카테고리별 탐색**: 특정 카테고리에 속한 동영상을 탐색합니다.
 3. **키워드 검색**: TikTok 동영상을 키워드로 검색합니다.
 
-## GraphQL Schema Specification
+## [GraphQL Schema Specification](https://github.com/MMMetrics/MMM-api/blob/main/src/main/resources/graphql/schema.graphqls)
 
 ### `Query`
 
