@@ -1,4 +1,4 @@
-![header](https://github.com/user-attachments/assets/527c9c9a-4bf8-4a4d-82a3-9038c823b370)
+![header](https://github.com/user-attachments/assets/4369585a-f487-4bb6-927a-d200554530ca)
 
 ## 주요 기능
 
