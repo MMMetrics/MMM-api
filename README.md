@@ -1,4 +1,4 @@
-![header](https://github.com/user-attachments/assets/4369585a-f487-4bb6-927a-d200554530ca)
+<img width="661" alt="mmm" src="https://github.com/user-attachments/assets/97c8c35f-a3e0-46e2-88d3-a3da3f09401a" />
 
 ## 주요 기능
 
